@@ -11,7 +11,7 @@ const Navbar = () => {
     const Menu = [
         { name: "Home", path: "#Home" },
         { name: "Education", path: "#Education" },
-        { name: "Portfolio", path: "#Portfolio" },
+        { name: "Achivement", path: "#Achivement" },
         { name: "Resume", path: "#Resume" },
 
     ];

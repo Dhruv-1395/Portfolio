@@ -7,7 +7,7 @@ const About = () => {
             <h1 className='text-white text-5xl text-center'>Education</h1>
             <div className="row py-8">
                 <div className="col-lg-6 ">
-                  <div className="ed  py-5 rounded-lg px-3 my-4 mx-auto w-75 hover:bg-slate-400 duration-200">
+                  <div className="ed  py-5 rounded-lg px-3 my-4 mx-auto w-75  hover:bg-slate-400 duration-200">
                     <h3 className='text-3xl font-bold my-2'>Higher Secondary School </h3>
                     <span className='text-sm'>Gyanganga Higher Secondary School-Rajkot (2022-2023)</span>
                     <hr className='my-3'/>
@@ -23,6 +23,7 @@ const About = () => {
                   </div>
                 </div>
             </div>
+            <hr className='bg-white'/>
         </div>
    </section>
   )

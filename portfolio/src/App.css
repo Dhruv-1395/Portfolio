@@ -8,7 +8,7 @@
 
 nav{
   background-color:#212428b5;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 }
 
 nav li{
@@ -16,7 +16,8 @@ nav li{
 }
 
 section{
-  padding-top: 100px;
+  padding: 50px 0px;
+  width: 100%;
 }
 
 .cls-btn-anime{

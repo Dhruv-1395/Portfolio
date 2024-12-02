@@ -3,7 +3,7 @@
 
 }
 
-#Education .ed {
+ .ed {
     color: rgba(255, 255, 255, 0.734);
   background: rgb(32, 35, 39);
   background: linear-gradient(
@@ -16,4 +16,10 @@
 }
 .ed:hover{
     background: #ff014d88 !important;
+}
+
+@media (max-width:1400px){
+  .ed{
+    width: 100% !important;
+  }
 }
