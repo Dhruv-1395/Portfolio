@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react'
+import React,{useState,useRef,useEffect} from 'react'
 import logo from '../Assets/logos-circle.png'
 import sound from '../sound/click.wav'
 import { IoMenu } from "react-icons/io5";
@@ -10,11 +10,19 @@ const Navbar = () => {
     const toggleMenuRef = useRef(null);
     const Menu = [
         { name: "Home", path: "#Home" },
-        { name: "Fetures", path: "#Fetures" },
+        { name: "Education", path: "#Education" },
         { name: "Portfolio", path: "#Portfolio" },
         { name: "Resume", path: "#Resume" },
 
     ];
+    // const Anime = () =>{
+    //     gsap.from('#Navbar',{
+    //         y:'-100px',
+    //         duration:0.5,
+    //         position:'sticky',
+    //         top:0,
+    //     })
+    // }
     const handleMenuClick = (menu) => {
         setActiveMenu(menu);
         const audio = new Audio(sound);
@@ -41,9 +49,21 @@ const Navbar = () => {
         setToggleMenu(false)
 
     }
+    // window.onscroll = function() {
+    //     if (window.scrollY > 100) {
+    //         Anime();
+    //     } else {
+    //         gsap.to('#Navbar',{
+    //             y:'0',
+    //             duration:0.2,
+    //             position:'sticky',
+    //             top:0,
+    //         })
+    //     }
+    // };
     return (
         <>
-              <nav className='py-2 px-4 flex justify-between items-center z-50 transition-all duration-300  '>
+              <nav className='py-2 px-4 flex justify-between items-center z-50 transition-all duration-300 sticky top-0 shadow' id='Navbar'>
             <div className="logo flex items-center space-x-4">
                 <img src={logo} alt="logo" />
                 <h4 className="text-2xl text-white">Portfolio</h4>
@@ -62,7 +82,7 @@ const Navbar = () => {
                         return (
                             <a href={item.path} key={index}>
                                 <li
-                                    className="text-lg hover:text-[#FF093D] cursor-pointer transition duration-500"
+                                    className="text-lg font-semibold hover:text-[#FF093D] cursor-pointer transition duration-500"
                                     onClick={() => {
                                         handleMenuClick(item.path);
                                     }}

@@ -7,6 +7,7 @@ p{
 }
 .img-container{
     box-shadow: rgba(225, 223, 223, 0.049) 0px 2px 8px 8px;
+    height:68%;
 }
 .img-container img{
     transform: translateY(-27%);

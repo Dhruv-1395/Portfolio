@@ -6,14 +6,17 @@
   box-sizing: border-box;
 }
 
-
+nav{
+  background-color:#212428b5;
+  backdrop-filter: blur(10px);
+}
 
 nav li{
   font-family: "Montserrat", sans-serif;
 }
 
 section{
-  padding: 100px 0px;
+  padding-top: 100px;
 }
 
 .cls-btn-anime{

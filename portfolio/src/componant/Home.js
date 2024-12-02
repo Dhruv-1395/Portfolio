@@ -39,17 +39,18 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 col-xl-5 my-5">
+          <div className="col-12 col-xl-5 mt-5">
             <div className="img-container h-96 w-full mt-5 bg-[#1E2024] rounded relative ">
               <img
                 src={banner}
                 className=" w-75 mx-auto object-cover"
                 alt="Banner"
               />
-
             </div>
           </div>
         </div>
+        <hr className='bg-white'/>
+
       </div>
     </section>
   )
