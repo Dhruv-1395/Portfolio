@@ -1,5 +1,7 @@
 import React from 'react'
 import '../Css/Education.css'
+import gsap from 'gsap'
+import ScrollTrigger from "gsap/ScrollTrigger";
 const About = () => {
   return (
    <section id='Education'>
