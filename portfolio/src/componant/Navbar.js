@@ -3,7 +3,7 @@ import logo from '../Assets/logos-circle.png'
 import sound from '../sound/click.wav'
 import { IoMenu } from "react-icons/io5";
 import { IoIosClose } from "react-icons/io";
-import {gsap} from 'gsap';
+// import {gsap} from 'gsap';
 const Navbar = () => {
     const [activemenu,setActiveMenu] = useState('#Home');
     const [togglemenu,setToggleMenu] = useState(false);
@@ -12,6 +12,7 @@ const Navbar = () => {
         { name: "Home", path: "#Home" },
         { name: "Education", path: "#Education" },
         { name: "Achivement", path: "#Achivement" },
+        { name: "Projects", path: "#Projects" },
         { name: "Resume", path: "#Resume" },
 
     ];

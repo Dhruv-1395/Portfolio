@@ -9,6 +9,10 @@
     );
     box-shadow: rgba(253, 253, 253, 0.2) 0px 5px 24px 0px;
 }
+img{
+  border-radius: 15px;
+
+}
 #Achivement .Ac:hover img{
     transform: scale(1.07);
 }
