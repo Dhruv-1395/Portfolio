@@ -23,3 +23,8 @@
     width: 100% !important;
   } 
 }
+@media (max-width:991px){
+  .ed{
+    margin: 20px 0;
+  } 
+}

@@ -10,7 +10,7 @@ const About = () => {
         <div className="w-[150px] h-[3px] mx-auto my-2 bg-[#FF014F]"></div>
         <div className="row py-8">
           <div className="col-lg-6 ">
-            <div class="ed text-white max-w-xl p-8 rounded-lg ">
+            <div class="ed text-white w-[80%] lg:max-w-full p-8 mx-auto rounded-lg ">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="text-xl font-bold">Higher Secondary School</h3>
@@ -24,7 +24,7 @@ const About = () => {
             </div>
           </div>
           <div className="col-lg-6 ">
-          <div class="ed text-white max-w-xl p-8 rounded-lg ">
+          <div class="ed text-white w-[80%] lg:max-w-full p-8 mx-auto rounded-lg ">
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="text-xl font-bold">BSc in Information Tachnology</h3>
