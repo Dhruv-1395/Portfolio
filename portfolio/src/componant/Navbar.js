@@ -13,7 +13,7 @@ const Navbar = () => {
         { name: "Education", path: "#Education" },
         { name: "Achivement", path: "#Achivement" },
         { name: "Projects", path: "#Projects" },
-        { name: "Resume", path: "#Resume" },
+        { name: "Contact", path: "#Contact" },
 
     ];
     // const Anime = () =>{

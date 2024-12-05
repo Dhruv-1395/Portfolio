@@ -11,7 +11,7 @@ const Works = () => {
         <div className="w-[150px] h-[3px] mx-auto my-3 bg-[#FF014F]"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-[40px]">
-          <div className="w-full lg:max-w-md  rounded-3xl mx-auto  p-6 space-y-4 text-white/75  bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_5px_24px_0px_rgba(253,253,253,0.2)]">
+          <div className="w-full lg:max-w-md rounded-3xl mx-auto p-6 space-y-4 text-white/75  bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_5px_24px_0px_rgba(253,253,253,0.2)]">
             <div className=" relative overflow-hidden rounded-2xl group">
               <div className="w-full bg-[#212428ab] absolute top-0 h-[100%] flex items-center justify-center opacity-0 group-hover:opacity-100 duration-200">
                 <div className="h-12 w-12 rounded-full bg-[#ff014dbd] flex items-center justify-center cursor-pointer">
@@ -25,7 +25,7 @@ const Works = () => {
               </div>
               <img
                 src={img1}
-                alt="Profile photo"
+                alt="project"
                 width={800}
                 className="object-cover"
               />
@@ -52,7 +52,7 @@ const Works = () => {
               </div>
               <img
                 src={img2}
-                alt="Profile photo"
+                alt="Project"
                 width={800}
                 className="object-cover"
               />
@@ -65,6 +65,7 @@ const Works = () => {
             </div>
           </div>
         </div>
+        <hr className='bg-white' />
       </div>
     </section>
   );
