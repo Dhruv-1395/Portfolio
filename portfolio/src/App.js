@@ -7,27 +7,31 @@ import Achivement from "./componant/Achivement";
 import Works from "./componant/Works";
 import Contact from "./componant/Contact";
 import Loader from "./componant/Loader";
+
+
 function App() {
   const [isloding, setIsLoading] = useState(true);
-
+ 
   setTimeout(() => {
     setIsLoading(false);
   }, 2500);
+
+ 
   return (
     <>
-    {
-      (isloding)?<Loader />
-      :
-      <div className="App bg-[#212428] pb-[50px] min-h-screen  w-100 ">
-        <Navbar />
-        <Home />
-        <About />
-        <Achivement />
-        <Works />
-        <Contact />
-      </div>
-    }
-      
+      {
+        (isloding) ? <Loader />
+          :
+          <div className="App bg-[#212428] pb-[50px] min-h-screen  w-100 ">
+            <Navbar />
+            <Home />
+            <div className="sectionAnime"><About /></div>
+            <div className="sectionAnime"><Achivement /></div>
+            <div className="sectionAnime"><Works /></div>
+            <div className="sectionAnime"><Contact /></div>
+          </div>
+      }
+
     </>
   );
 }
