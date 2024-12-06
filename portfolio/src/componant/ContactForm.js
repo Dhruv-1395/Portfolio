@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <div>
-      <form onSubmit='' className="w-full mx-auto space-y-6 bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_5px_24px_0px_rgba(253,253,253,0.2)] py-4 px-4  rounded-3xl">
+      <form id="contact-form"  className="w-full text-[20px] mx-auto space-y-6 bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_0px_24px_1px_rgba(253,253,253,0.2)] py-4 px-4  rounded-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label
@@ -15,14 +15,13 @@ const ContactForm = () => {
             <input
               id="name"
               type="text"
-              className="w-full px-4 py-3 bg-[#22262a] border border-gray-800 rounded-sm focus:outline-none focus:border-gray-700 text-gray-300"
+              className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
             //   value={formData.name}
             //   onChange={(e) =>
             //     setFormData({ ...formData, name: e.target.value })
             //   }
             />
           </div>
-
           <div className="space-y-2">
             <label
               htmlFor="phone"
@@ -33,7 +32,7 @@ const ContactForm = () => {
             <input
               id="phone"
               type="tel"
-              className="w-full px-4 py-3 bg-[#22262a] border border-gray-800 rounded-sm focus:outline-none focus:border-gray-700 text-gray-300"
+              className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
             //   value={formData.phone}
             //   onChange={(e) =>
             //     setFormData({ ...formData, phone: e.target.value })
@@ -41,7 +40,6 @@ const ContactForm = () => {
             />
           </div>
         </div>
-
         <div className="space-y-2">
           <label
             htmlFor="email"
@@ -52,7 +50,7 @@ const ContactForm = () => {
           <input
             id="email"
             type="email"
-            className="w-full px-4 py-3 bg-[#22262a] border border-gray-800 rounded-sm focus:outline-none focus:border-gray-700 text-gray-300"
+            className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
             // value={formData.email}
             // onChange={(e) =>
             //   setFormData({ ...formData, email: e.target.value })
@@ -70,7 +68,7 @@ const ContactForm = () => {
           <input
             id="subject"
             type="text"
-            className="w-full px-4 py-3 bg-[#22262a] border border-gray-800 rounded-sm focus:outline-none focus:border-gray-700 text-gray-300"
+            className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
             // value={formData.subject}
             // onChange={(e) =>
             //   setFormData({ ...formData, subject: e.target.value })
@@ -88,17 +86,16 @@ const ContactForm = () => {
           <textarea
             id="message"
             rows={4}
-            className="w-full px-4 py-3 bg-[#22262a] border border-gray-800 rounded-sm focus:outline-none focus:border-gray-700 text-gray-300 resize-none"
+            className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300 resize-none"
             // value={formData.message}
             // onChange={(e) =>
             //   setFormData({ ...formData, message: e.target.value })
             // }
           />
         </div>
-
         <button
           type="submit"
-          className="w-full px-6 py-3 text-sm tracking-wide text-gray-300 uppercase transition-colors duration-300 bg-[#22262a] border border-gray-800 rounded-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700"
+          className="w-full px-6 py-3 text-sm tracking-wide text-gray-300 uppercase transition-colors  bg-[#191B1E] rounded-lg hover:-translate-y-3 focus:outline-none focus:ring-2 shadow "
         >
           Send Message
         </button>
