@@ -13,7 +13,7 @@ const Contact = () => {
         <h6 className="text-center text-[#FF014F] my-4">Contact</h6>
         <h1 className="text-white text-5xl text-center">Contact With Me</h1>
         <div className="w-[150px] h-[3px] mx-auto my-3 bg-[#FF014F]"></div>
-        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] xl:grid-cols-[30%_70%] my-14 gap-7">
+        <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] xl:grid-cols-[30%_70%] my-14 gap-2">
           <div className="w-full md:w-[70%] lg:w-full relative my-8 lg:my-0  rounded-3xl mx-auto  p-6 space-y-4 text-white/75  bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_0px_24px_1px_rgba(253,253,253,0.2)]">
             <div className=" relative overflow-hidden rounded-2xl group">
               <img

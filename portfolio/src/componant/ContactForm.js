@@ -1,9 +1,35 @@
-import React from "react";
-
+import React,{useState} from "react";
+import axios from 'axios'
+import { toast } from "react-hot-toast";
 const ContactForm = () => {
+  const [fname, setFname] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const data = await axios.post('http://localhost:5000/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
+    .then(res =>{
+        if(res.data.message){
+        toast.success('Data Submitted Successfully!');
+        setFname('');
+        setPhone('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+        }
+        
+
+      
+    })
+    .catch(err => console.log(err))
+  }
   return (
     <div>
-      <form id="contact-form"  className="w-full text-[20px] mx-auto space-y-6 bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_0px_24px_1px_rgba(253,253,253,0.2)] py-4 px-4  rounded-3xl">
+      <form id="contact-form" onSubmit={handleSubmit} className="w-full text-[20px] mx-auto space-y-6 bg-gradient-to-t from-gray-1000 via-gray-800 to-transparent shadow-[0px_0px_24px_1px_rgba(253,253,253,0.2)] py-4 px-4  rounded-3xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
             <label
@@ -15,11 +41,13 @@ const ContactForm = () => {
             <input
               id="name"
               type="text"
-              className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
-            //   value={formData.name}
-            //   onChange={(e) =>
-            //     setFormData({ ...formData, name: e.target.value })
-            //   }
+              name="fname"
+              className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 
+              text-gray-300"
+              value={fname}
+              onChange={(e) =>
+                setFname( e.target.value )
+              }
             />
           </div>
           <div className="space-y-2">
@@ -32,11 +60,12 @@ const ContactForm = () => {
             <input
               id="phone"
               type="tel"
+              name="phone"
               className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
-            //   value={formData.phone}
-            //   onChange={(e) =>
-            //     setFormData({ ...formData, phone: e.target.value })
-            //   }
+              value={phone}
+              onChange={(e) =>
+                setPhone( e.target.value )
+              }
             />
           </div>
         </div>
@@ -50,11 +79,12 @@ const ContactForm = () => {
           <input
             id="email"
             type="email"
+            name="email"
             className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
-            // value={formData.email}
-            // onChange={(e) =>
-            //   setFormData({ ...formData, email: e.target.value })
-            // }
+            value={email}
+              onChange={(e) =>
+                setEmail( e.target.value )
+              }
           />
         </div>
 
@@ -68,11 +98,12 @@ const ContactForm = () => {
           <input
             id="subject"
             type="text"
+            name="subject"
             className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300"
-            // value={formData.subject}
-            // onChange={(e) =>
-            //   setFormData({ ...formData, subject: e.target.value })
-            // }
+            value={subject}
+            onChange={(e) =>
+              setSubject( e.target.value )
+            }
           />
         </div>
 
@@ -86,11 +117,12 @@ const ContactForm = () => {
           <textarea
             id="message"
             rows={4}
+            name="message"
             className="w-full px-4 py-2 bg-[#191B1E] shadow rounded-lg focus:outline-none focus:border-gray-700 text-gray-300 resize-none"
-            // value={formData.message}
-            // onChange={(e) =>
-            //   setFormData({ ...formData, message: e.target.value })
-            // }
+            value={message}
+              onChange={(e) =>
+                setMessage( e.target.value )
+              }
           />
         </div>
         <button
