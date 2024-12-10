@@ -1,0 +1,31 @@
+#Education{
+    font-family: "Montserrat", sans-serif;
+    padding: 50px 0;
+
+}
+
+ .ed {
+    color: rgba(255, 255, 255, 0.734);
+  background: rgb(32, 35, 39);
+  background: linear-gradient(
+    -195deg,
+    rgba(32, 35, 39, 1) 0%,
+    rgba(30, 32, 37, 1) 58%,
+    rgba(246, 240, 240, 0) 86%
+  );
+  box-shadow: rgba(253, 253, 253, 0.2) 0px 5px 24px 0px;
+}
+.ed:hover{
+    background: #ff014d88 !important;
+}
+
+@media (max-width:1400px){
+  .ed{
+    width: 100% !important;
+  } 
+}
+@media (max-width:991px){
+  .ed{
+    margin: 20px 0;
+  } 
+}

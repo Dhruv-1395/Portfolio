@@ -1,0 +1,32 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto; /* Ensures the scrollbar appears if needed */
+    overflow-x: hidden;
+  }
+  
+  /* Scrollbar container (track) */
+  body::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+  }
+  
+  /* Scrollbar track (background of the scrollbar) */
+  body::-webkit-scrollbar-track {
+    background: black; /* Light grey background for the track */
+  }
+  
+  /* Scrollbar thumb (draggable part) */
+  body::-webkit-scrollbar-thumb {
+    background: #FF014F; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  /* Scrollbar thumb on hover */
+  body::-webkit-scrollbar-thumb:hover {
+    background: #ff044fbc; /* Darker thumb color on hover */
+  }

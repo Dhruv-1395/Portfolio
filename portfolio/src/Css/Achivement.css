@@ -1,0 +1,18 @@
+#Achivement .Ac{
+    color: rgba(255, 255, 255, 0.734);
+    background: rgb(32, 35, 39);
+    background: linear-gradient(
+      -195deg,
+      rgba(32, 35, 39, 1) 0%,
+      rgba(30, 32, 37, 1) 58%,
+      rgba(246, 240, 240, 0) 86%
+    );
+    box-shadow: rgba(253, 253, 253, 0.2) 0px 5px 24px 0px;
+}
+img{
+  border-radius: 15px;
+
+}
+#Achivement .Ac:hover img{
+    transform: scale(1.07);
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  background-color:#212428b5;
+  backdrop-filter: blur(20px);
+}
+
+nav li{
+  font-family: "Montserrat", sans-serif;
+}
+
+section{
+  margin: 50px 0;
+  width: 100%;
+}
+
+.cls-btn-anime{
+  animation: rotateAnimation 0.2s linear 1 ;
+}
+#contact-form button{
+  transition: 0.3s;
+}
+#contact-form input{
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset !important;
+}
+#contact-form textarea{
+  box-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset !important;
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(90deg); /* End at 360 degrees (full rotation) */
+  }
+}
+
+@media (max-width:900px){
+  .toggle-menu{
+    position: fixed;
+    top: 0;
+    left:-200px;
+    width:200px;
+    height: 100vh;
+    z-index: 100;
+    background-color:#212428;
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    transition: 0.4s;
+  }
+  .menus ul{
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  .menus ul li{
+    margin: 20px 0;
+    max-width: max-content;
+  }
+}
+
+@media (max-width:500px){
+  h1{
+    font-size: 30px !important;
+  }
+}
