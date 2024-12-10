@@ -21,7 +21,7 @@ function App() {
       {isloding ? (
         <Loader />
       ) : (
-        <div className="App bg-[#212428] pb-[50px] min-h-screen  w-100 ">
+        <div className="App bg-[#212428] pb-[50px] relative min-h-screen  w-100 ">
           <Navbar />
           <Home />
           <div className="sectionAnime">
@@ -36,7 +36,16 @@ function App() {
           <div className="sectionAnime">
             <Contact />
           </div>
-          <Toaster position="top-center" reverseOrder={false} />
+          <Toaster
+           position="top-center" 
+           reverseOrder={false} 
+           toastOptions={{
+            style: {
+              zIndex: 9999, // Ensure it appears above other elements
+             
+            },
+          }}
+           />
         </div>
       )}
     </>

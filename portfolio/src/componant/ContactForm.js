@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import axios from 'axios'
-import { toast } from "react-hot-toast";
+import { toast } from 'react-hot-toast';
+
 const ContactForm = () => {
   const [fname, setFname] = useState('');
   const [phone, setPhone] = useState('');
@@ -14,16 +15,13 @@ const ContactForm = () => {
     const data = await axios.post('http://localhost:5000/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
     .then(res =>{
         if(res.data.message){
-        toast.success('Data Submitted Successfully!');
+        toast.success(res.data.message);
         setFname('');
         setPhone('');
         setEmail('');
         setSubject('');
         setMessage('');
         }
-        
-
-      
     })
     .catch(err => console.log(err))
   }
