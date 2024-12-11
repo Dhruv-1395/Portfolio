@@ -17,7 +17,7 @@ const ContactForm = () => {
       return;
     }
     setIsSendMail(false);
-    const data = await axios.post('https://portfolio-7qv5.onrender.com/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
+    const data = await axios.post('https://portfolio-utz0.onrender.com/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
     .then(res =>{
         if(res.data.message){
         toast.success(res.data.message);
