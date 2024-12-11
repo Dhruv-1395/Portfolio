@@ -7,10 +7,11 @@ p{
 }
 .img-container{
     box-shadow: rgba(225, 223, 223, 0.049) 0px 2px 8px 8px;
-    height:68%;
+    height:69%;
 }
 .img-container img{
-    transform: translateY(-27%);
+    transform: translateY(-100px);
+    width:400px !important;
 }
 .links .in{
     max-width: max-content;
@@ -28,11 +29,13 @@ p{
     }
     .img-container img{
         width: 500px !important;
+        transform: translateY(-142px);
+
     }
 }
 @media (max-width:1199px){
     .img-container{
-        height: 500px;
+        height: 545px;
     }
     .img-container img{
         width: 500px !important;
@@ -50,5 +53,7 @@ p{
     }
     .img-container img{
         width: 200px !important;
+        transform: translateY(-75px);
+
     }
 }

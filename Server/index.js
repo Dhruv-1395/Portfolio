@@ -5,7 +5,12 @@ import Router from './Router/Route.js';
 const port = process.env.PORT;
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin: process.env.ORIGIN,
+  methods: [ "POST"], 
+  allowedHeaders: ["Content-Type", "Authorization"], 
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api',Router);

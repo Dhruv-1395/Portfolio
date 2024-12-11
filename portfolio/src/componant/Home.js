@@ -44,7 +44,6 @@ const Home = () => {
       <div className="container">
         <div className="row flex-column-reverse flex-xl-row">
           <div ref={homeLeftRef} className="col-12 col-xl-7">
-            
             <span className='text-white'>Welcome to my portfolio</span>
             <h1 className='text-5xl text-white my-4'>Hi,i'm <span className='text-[#FF014F]'>Dhruv Savaliya</span>
             </h1>
@@ -61,7 +60,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col-12 col-xl-5 my-8">
-            <div ref={homeImgRef} className="img-container h-96 w-full mt-5 bg-[#1E2024] rounded relative ">
+            <div ref={homeImgRef} className="img-container h-96 w-full my-[50px] bg-[#1E2024] rounded relative ">
               <img
                 src={banner}
                 className=" w-75 mx-auto object-cover"

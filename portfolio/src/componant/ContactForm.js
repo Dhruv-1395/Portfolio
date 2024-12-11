@@ -1,21 +1,27 @@
 import React,{useState} from "react";
 import axios from 'axios'
 import { toast } from 'react-hot-toast';
-
+import Spinner from 'react-bootstrap/Spinner';
 const ContactForm = () => {
   const [fname, setFname] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-
+  const [issendmail,setIsSendMail] = useState(true);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    const data = await axios.post('http://localhost:5000/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
+    e.preventDefault();
+    if(!fname ||!phone ||!email ||!subject ||!message){
+      toast.error('All fields are required');
+      return;
+    }
+    setIsSendMail(false);
+    const data = await axios.post('https://portfolio-7qv5.onrender.com/api/contact',{fname:fname,phone:phone,email:email,subject:subject,message:message})
     .then(res =>{
         if(res.data.message){
         toast.success(res.data.message);
+        setIsSendMail(true);
         setFname('');
         setPhone('');
         setEmail('');
@@ -127,7 +133,16 @@ const ContactForm = () => {
           type="submit"
           className="w-full px-6 py-3 text-sm tracking-wide text-gray-300 uppercase transition-colors  bg-[#191B1E] rounded-lg hover:-translate-y-3 focus:outline-none focus:ring-2 shadow "
         >
-          Send Message
+          {
+            (!issendmail)? (
+              <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            ) : (
+              "Send"
+            )
+          }
+
         </button>
       </form>
     </div>

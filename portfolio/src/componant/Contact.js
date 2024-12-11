@@ -8,7 +8,7 @@ import { FaStackOverflow } from "react-icons/fa6";
 import ContactForm from "./ContactForm";
 const Contact = () => {
   return (
-    <section className="section" section id="Contact">
+    <section className="section"  id="Contact">
       <div className="container">
         <h6 className="text-center text-[#FF014F] my-4">Contact</h6>
         <h1 className="text-white text-5xl text-center">Contact With Me</h1>

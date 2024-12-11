@@ -4,7 +4,7 @@ import '../Css/Education.css'
 // import ScrollTrigger from "gsap/ScrollTrigger";
 const About = () => {
   return (
-    <section className='section' section id="Education">
+    <section className='section'  id="Education">
     <div className="container">
       <h1 className="text-white text-5xl text-center">Education</h1>
       <div className="w-[150px] h-[3px] mx-auto my-2 bg-[#FF014F]" />

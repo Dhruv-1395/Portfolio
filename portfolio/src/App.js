@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./componant/Navbar";
 import "./App.css";
-import Toaster from "react-hot-toast";
+import {Toaster} from "react-hot-toast";
 import Home from "./componant/Home";
 import About from "./componant/Education";
 import Achivement from "./componant/Achivement";
@@ -21,7 +21,7 @@ function App() {
       {isloding ? (
         <Loader />
       ) : (
-        <div className="App bg-[#212428] pb-[50px] relative min-h-screen  w-100 ">
+        <div className="App bg-[#212428] pb-[50px] relative h-100  w-100 ">
           <Navbar />
           <Home />
           <div className="sectionAnime">
@@ -36,6 +36,7 @@ function App() {
           <div className="sectionAnime">
             <Contact />
           </div>
+          
           <Toaster
            position="top-center" 
            reverseOrder={false} 
